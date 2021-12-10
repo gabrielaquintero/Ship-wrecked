@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 //Variables
 let fondosDePantalla = [];
 let obstaculos = [];
 let coleccionables = [];
+=======
+let fondosDePantalla = [];
+let obstaculos = [];
+>>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
 let contadorDePantalla = 0;
 let botonStart = new Boton(420, 480, 150);
 let posBotonStart = botonStart.getPos();
@@ -15,7 +20,10 @@ let personaje = new Personaje(50, 50);
 
 
 function preload() {
+<<<<<<< HEAD
     //Importacion de la imagenes
+=======
+>>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
     pantallaInicio = loadImage('assets/inicio.png');
     pantallaInstrucciones = loadImage('assets/instrucciones.png');
     pantallaJuego1 = loadImage('assets/primerTerreno.jpg');
@@ -27,6 +35,7 @@ function preload() {
 
 function setup() {
     createCanvas(1000, 1000);
+<<<<<<< HEAD
     //Arreglo de fondos de pantalla
     fondosDePantalla.push(pantallaInicio);
     fondosDePantalla.push(pantallaInstrucciones);
@@ -46,10 +55,25 @@ function setup() {
     coleccionable1Primer = new Coleccionable(50, 50, 50);
     numeroRandomObstaculos = 0;
     
+=======
+    fondosDePantalla.push(pantallaInicio);
+    fondosDePantalla.push(pantallaInstrucciones);
+    fondosDePantalla.push(pantallaJuego1);
+    obstaculos.push(obstaculo1);
+    obstaculos.push(obstaculo2);
+    obstaculos.push(obstaculo3);
+    obstaculo1Primer = new Obstaculo(random(50, 650), random(50, 650), random(150, 200));
+    obstaculo2Primer = new Obstaculo(random(50, 650), random(50, 650), random(150, 200));
+    obstaculo3Primer = new Obstaculo(random(50, 650), random(50, 650), random(150, 200));
+    obstaculo4Primer = new Obstaculo(random(50, 650), 850, random(150, 200));
+    coleccionable1Primer = new Coleccionable(50, 50, 50);
+    numeroRandomObstaculos = 0;
+>>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
 }
 
 function draw() {
 
+<<<<<<< HEAD
     
     background(255);
     //Imagen de gondo de pantalla que cambia con la variable de contador de pantalla.
@@ -65,6 +89,33 @@ function draw() {
     
     
 
+=======
+    background(255);
+
+    image(fondosDePantalla[contadorDePantalla], 0, 0, 1000, 1000);
+
+    funcionesBotones();
+
+       
+    
+    if (contadorDePantalla === 2) {
+        personaje.dibujar(personajeSkin);
+        personaje.mover();
+        
+
+        obstaculosPrimerNivel = [];
+        obstaculosPrimerNivel.push(obstaculo1Primer);
+        obstaculosPrimerNivel.push(obstaculo2Primer);
+        obstaculosPrimerNivel.push(obstaculo3Primer);
+        obstaculo4Primer.dibujar(obstaculos[2]);
+        for (let i = 0; i < obstaculosPrimerNivel.length; i++) {
+            
+            obstaculosPrimerNivel[i].dibujar(obstaculos[numeroRandomObstaculos])
+        }
+        
+           
+        }
+>>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
 
     }
 
@@ -112,6 +163,7 @@ function funcionesBotones() {
     } 
 }
 
+<<<<<<< HEAD
 function primerJuego() { 
     if (contadorDePantalla === 2) {
     
@@ -156,4 +208,6 @@ function contactoConPersonaje(posicionesPersonaje, posicionesObjeto) {
        posicionesPersonaje.setX1(posicionesPersonaje.getX1());
     }
 }
+=======
+>>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
 
