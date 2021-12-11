@@ -9,7 +9,6 @@ class Obstaculo {
 
         dibujar(imagen) {
             fill(this.x, this.y, this.tamaño);
-            square(this.x, this.y, this.tamaño);
             image(imagen, this.x, this.y, this.tamaño, this.tamaño);
     }
     
