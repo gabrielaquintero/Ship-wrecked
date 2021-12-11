@@ -1,76 +1,49 @@
-class Enemigo {
-    constructor(x, y, speed) {
+class Personaje {
+    constructor(x, y) {
         this.x = x;
         this.y = y;
         this.x1 = this.x - 65;
         this.x2 = this.x1 + 100;
         this.y1 = this.y;
         this.y2 = this.y + 200;
-        this.dir = 0;
-        this.speed = speed;
 
      }
     
 
     dibujar(imagen) {
         fill(255, 0, 0);
-        image(imagen, this.x - 65, this.y, 200, 200);
-        this.cambiarDireccion();
-        this.mover();
+        image(imagen, this.x-65, this.y, 200, 200);
     }
 
     vidaPersonaje() { 
         
     }
 
-    cambiarDireccion() { 
-        if (frameCount % 60 == 0) {
-            this.dir = int(random(0, 4));
-        }
-    }
-
 
     mover() {
-    
+        let dir;
 
-        if (this.x > 850) { 
-            this.x = 850;
-            this.cambiarDireccion();
+        if (frameCount % 60 == 0) {
+        dir = int(random(0,4));
         }
 
-        if (this.x < 150) { 
-            this.x = 150;
-            this.cambiarDireccion();
+        switch (dir) {
+            case 0:
+                this.y--;
+                break;
+            case 1:
+                this.y++;
+                break;
+            case 3:
+                this.x++;
+                break;
+            case 4:
+                this.x--;
+                break;
+                
         }
-
-          if (this.y > 850) { 
-            this.y = 850;
-            this.cambiarDireccion();
-        }
-
-        if (this.y < 150) { 
-            this.y = 150;
-            this.cambiarDireccion();
-        }
-
-     
         
-        if (this.dir === 0) { 
-            this.y += this.speed;
-        }
-
-         if (this.dir === 1) { 
-            this.y -= this.speed;
-        }
-
-        if (this.dir === 2) { 
-            this.x+= this.speed * 2;
-        }
-
-        if (this.dir === 3) { 
-            this.x-= this.speed * 2;
-        }
-
+    
     }
 
    setX1(x) {
