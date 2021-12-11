@@ -6,10 +6,6 @@ class Personaje {
         this.x2 = this.x1 + 100;
         this.y1 = this.y;
         this.y2 = this.y + 200;
-<<<<<<< HEAD
-
-=======
->>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
      }
     
 
@@ -18,13 +14,6 @@ class Personaje {
         image(imagen, this.x-65, this.y, 200, 200);
     }
 
-<<<<<<< HEAD
-    vidaPersonaje() { 
-        
-    }
-
-=======
->>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
 
     mover() {
             let speed = 3;
@@ -46,27 +35,6 @@ class Personaje {
         if (keyIsDown(65)) {
             this.x -= speed; 
         } 
-<<<<<<< HEAD
-        
-        return [this.x, this.y]
-    
-    }
-
-   setX1(x) {
-       this.x = x;
-    }
-
-    setY1(y) {
-       this.y = y;
-    }
-
-    getX1() { 
-        return this.x +80;
-    }
-
-    getY1() { 
-        return this.y ;
-=======
     
     }
 
@@ -77,6 +45,5 @@ class Personaje {
         posiciones.push(this.y1);
         posiciones.push(this.y2);
         return posiciones
->>>>>>> ad06ea94ea6bf7f511f09456b94fdc0a53f15299
     }
 }
