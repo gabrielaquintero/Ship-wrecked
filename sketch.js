@@ -311,6 +311,11 @@ function funcionesBotones() {
 //Funcion ejecuta el primer juego
 function primerJuego() { 
 
+    if(cantidadCorazones === 0) {
+        contadorDePantalla = 2;
+        cantidadCorazones = 4;
+    }
+
     if (modoTrivia1 === true) { 
         modoTrivia1 = false
     }
@@ -365,6 +370,11 @@ function primerJuego() {
 }
 
 function segundoJuego() { 
+
+    if(cantidadCorazones === 0) {
+        contadorDePantalla = 2;
+        cantidadCorazones = 4;
+    }
 
      if (modoTrivia2 === true) { 
         modoTrivia2 = false
@@ -430,6 +440,11 @@ function segundoJuego() {
 
 function tercerJuego() { 
 
+    if(cantidadCorazones === 0) {
+        contadorDePantalla = 2;
+        cantidadCorazones = 4;
+    }
+
      if (modoTrivia3 === true) { 
         modoTrivia3 = false
     }
@@ -491,6 +506,11 @@ function tercerJuego() {
 }
 
 function cuartoJuego() {
+
+      if(cantidadCorazones === 0) {
+        contadorDePantalla = 2;
+        cantidadCorazones = 4;
+    }
 
      if (modoTrivia4 === true) { 
         modoTrivia4 = false
